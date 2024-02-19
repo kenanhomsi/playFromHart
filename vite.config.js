@@ -5,7 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/playFromHart/",
   plugins: [react()],
-  build: {
-    target: 'esnext'
-  },
+
 })
