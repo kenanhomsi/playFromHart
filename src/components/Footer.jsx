@@ -44,14 +44,18 @@ const Footer = (props) => {
         };
         const handleClick=()=>{
             document.querySelector('.order_click_btn').innerHTML="تم تأكيد الطلب بنجاج "
-        document.querySelector('.order_click_btn').setAttribute('id','Active');
+            document.querySelector('.order_click_btn').setAttribute('id','Active');
     }
-    if(props.OrderBtnState){
+    if(props.OrderBtnState === 'off'){
         let x= document.querySelector('.info');
+        if(x){
         x.setAttribute('class','info Active');
-    }else{
+        }
+    }else if(props.OrderBtnState === 'on'){
         let x= document.querySelector('.info');
-        x.setAttribute('class','info');
+        if(x){
+             x.setAttribute('class','info');
+            }
     }
   return (
     <div className="Footer" dir="rtl" id='Footer'>

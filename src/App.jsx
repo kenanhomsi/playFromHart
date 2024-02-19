@@ -5,29 +5,47 @@ import Body from './/components//Body'
 import WhoAreWe from './/components//Who_we'
 import Footer from './/components//Footer'
 import axios from 'axios'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+ 
 
-// const PlayerClass= await axios.get("https://game-api-hex6.onrender.com/api/v1/playerclass/").then((response)=>{
-//     return response;
-// }).catch((err)=>console.log(err));
-// let PlayerClasslist =PlayerClass.data;
+const App=()=> {
+  const [Classlist,setClasslist]=useState();
+  const [playerClassSelected,setPlayerClassSelected]=useState();
+  const [OrderBtnState,setOrderBtnState]=useState('on');
+  useEffect(()=>{
+    console.log('yess');  
+    axios.get("https://game-api-hex6.onrender.com/api/v1/playerclass/")
+    .then((response)=>{
+      console.log(response.data);
+      let x=response.data;
+      setClasslist(x);
+      setPlayerClassSelected(x[0].playerclass);
+    })
+      .catch((err)=>console.log(err));
+  
+},[' '])
 
-function App() {
-  // const [playerClassSelected,setPlayerClassSelected]=useState(PlayerClasslist[0].playerclass)
-  // const [OrderBtnState,setOrderBtnState]=useState('on');
-  // axios.get('https://game-api-hex6.onrender.com/api/v1/MainPage/?banner="main"')
-  // .then((res)=>{
-  //   setOrderBtnState(res.data[0].BayBtn)})
-  // .catch((err)=>console.log(err));
+
+  console.log(Classlist)
+  console.log(playerClassSelected);
+  axios.get('https://game-api-hex6.onrender.com/api/v1/MainPage/?banner="main"')
+  .then((res)=>{
+    setOrderBtnState(res.data[0].BayBtn)})
+  .catch((err)=>console.log(err));
   return (
     <>
     <div className='App'>
-    {/* <Navbar OrderBtnState={OrderBtnState} />
-    <ListGames setPlayerClassSelecte={(value)=> setPlayerClassSelected(value)}/>
-    <Body  playerClassSelected={playerClassSelected}/> */}
+    <Navbar OrderBtnState={OrderBtnState} />
+    {playerClassSelected&&<>
+      <ListGames setPlayerClassSelecte={(value)=> setPlayerClassSelected(value)}/>
+    <Body  playerClassSelected={playerClassSelected}/>
+    </>
+    }
     <WhoAreWe />
     </div>
-    {/* <Footer OrderBtnState={OrderBtnState} /> */}
+    {
+      OrderBtnState && <Footer OrderBtnState={OrderBtnState} />
+    }
     </>
   )
 }

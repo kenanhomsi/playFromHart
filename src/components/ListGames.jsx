@@ -1,10 +1,15 @@
 import axios from 'axios'
+import { useEffect, useState } from 'react';
 
-const PlayerClass= await axios.get("https://game-api-hex6.onrender.com/api/v1/playerclass/").then((response)=>{
-    return response;
-}).catch((err)=>console.log(err));
-let PlayerClasslist =PlayerClass.data;
+// const PlayerClass= await 
 const ListGames = (props) => {
+    const [PlayerClasslist,setPlayerClasslist]=useState();
+    useEffect(()=>{
+      axios.get("https://game-api-hex6.onrender.com/api/v1/playerclass/").then((response)=>{
+        setPlayerClasslist(response.data);
+      return response;
+    }).catch((err)=>console.log(err));
+    },[ ])
   const handelClickMobile=(event)=>{
     console.log(event.target.value);
     props.setPlayerClassSelecte(event.target.value)
