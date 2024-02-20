@@ -637,13 +637,14 @@ color: var(--mainColor);
       display: grid;
       grid-template-areas: "btns btns"
                           "previous next";
+      gap: 15px;
   }
   .Previous_and_next .btns{
     grid-area: btns;
   }
   .SingleGame_container .body .video iframe {
     width: 1140px;
-    height: 480px;
+    height: 220px;
   }
   .Previous_and_next .Previous{
     grid-area: previous;
@@ -741,7 +742,8 @@ color: var(--mainColor);
     left: -24px;
 }
 .SingleGame_container .body .text {
-  display: none;
+  margin-bottom: 5px;
+  font-size: 17px;
 }
 }
 /*final*/
