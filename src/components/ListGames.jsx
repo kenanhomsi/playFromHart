@@ -27,7 +27,7 @@ const ListGames = (props) => {
             <div><h2>.  <span>قائمة الألعاب </span>  .</h2></div>
         </div>
         <div className="headerForMobile" dir="rtl">
-            <div><h2>مين بيلعب البكج ؟</h2></div>
+            <div><h2>مين بيلعب ؟</h2></div>
         </div>
         <div className="body">
             {
@@ -42,7 +42,7 @@ const ListGames = (props) => {
                   
                     // eslint-disable-next-line react/prop-types
                     <div className={classforplayer} id={ele.playerclass} key={ele._id} onClick={handelClick}>
-                    {ele.playerclass}<span>{`>`}</span>
+                    {ele.playerclass}<i className="fa-solid fa-chevron-right"></i>
                     </div>
                   
                 )

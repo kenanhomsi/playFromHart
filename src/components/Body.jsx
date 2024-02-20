@@ -8,7 +8,9 @@ const Body = ( props) => {
   const [showALLgames,setshowALLgames]=useState('off');
   const [GamesList,setGamesList]=useState();
   let classSelected=props.playerClassSelected;
-
+useEffect(()=>{
+  setStateNumber(1);
+},[ classSelected ])
 useEffect(()=>{
    axios.get(`https://www.playwith5.com/el3b-server/api/v1/games/filtering/?name="${classSelected}"`).then((response)=>{
   // console.log(response.data.deletegame);

@@ -384,7 +384,8 @@ align-items: center;
   padding: 40px 0;
 }
 .Footer .info{
-  width: 70%;
+  width: 100%;
+  
   display: flex;
 align-items: center;
 padding: 0px 60px;
@@ -411,7 +412,7 @@ padding: 0px 60px;
 }
 .Footer .info .text .down{
   text-align: left;
-  padding-left: 65px;
+  padding-left: 38px;
 }
 
 .Footer .info .text .up::after{
@@ -450,7 +451,7 @@ padding: 0px 60px;
 color: var(--mainColor);
 }
 .Footer .order-here{
-  width: 30%;
+  width: 55%;
 }
 .Footer .order-here form{
   margin-top: -35px;
@@ -632,7 +633,7 @@ color: var(--mainColor);
     border-radius: 14px;
   }
     .Previous_and_next {
-      margin-top: 60px;
+      margin-top: 0px;
       display: grid;
       grid-template-areas: "btns btns"
                           "previous next";
@@ -640,8 +641,15 @@ color: var(--mainColor);
   .Previous_and_next .btns{
     grid-area: btns;
   }
+  .SingleGame_container .body .video iframe {
+    width: 1140px;
+    height: 480px;
+  }
   .Previous_and_next .Previous{
     grid-area: previous;
+  }
+  .SingleGame_container .header {
+    margin-top: -20px;
   }
   .Previous_and_next .next{
     grid-area: next;
@@ -732,7 +740,9 @@ color: var(--mainColor);
     top: 288px;
     left: -24px;
 }
-
+.SingleGame_container .body .text {
+  display: none;
+}
 }
 /*final*/
 .allGamesdiv{
@@ -761,4 +771,10 @@ color: var(--mainColor);
   font-size: 18px;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
+}
+.Cplayer i{
+  margin: 0px 20px;
+}
+.playerClassMobile option{
+  font-size: 13px;
 }

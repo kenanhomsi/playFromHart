@@ -63,39 +63,36 @@ const Footer = (props) => {
             <div className="logo">
                     <img src={logo} alt="logo" />
             </div>
-            <div className="text">
-                <div className="up">
-                    <div className="btns">
-                        <a href="#">الرئيسيه</a>
-                        <a href="#">الدعم الفني</a>
-                        <a href="#">الشروط و الأحكام</a>
-                    </div>
-                    <div className="socialMedia">
-                    <a href="#"><i className="fa-brands fa-tiktok" ></i></a>
-                    <a href="#"><i className="fa-brands fa-square-instagram "></i></a>
-                    </div>
-                </div>
-                <div className="down">
-                    <p>جميع حقوق النشر والطبع محفوظة 2024©</p>
-                </div>
-            </div>
-        </div>
-       {
+            {
         props.OrderBtnState === 'on' &&  <div className="order-here">
         <form onSubmit={handleSubmit} action="">
-            <h3>هل تريد طلب اللعبه؟</h3>
+            <h3>ودّك تطلب البكج ؟</h3>
             <p>قم بملء البيانات التالية</p>
             <input type="text" className='FullName' placeholder='الإسم بالكامل' onChange={handleChange}/>
-            <select name="zipcode" className='zipcode'  id="select1" onChange={handleSelect} >
-                    <option value="963">963</option>
-                    <option  value="666">666</option>
-                    <option  value="222">222</option>
-            </select>
+          
             <input type='number' className='phoneNumebr' placeholder='رقم الجوال' onChange={handleChange} />
             <button className='order_click_btn' onClick={handleClick} type='submit'  >طلب اللعبه</button>
         </form>
         </div>   
        } 
+            <div className="text">
+                <div className="up">
+                    {/* <div className="btns">
+                        <a href="#">الرئيسيه</a>
+                        <a href="#">الدعم الفني</a>
+                        <a href="#">الشروط و الأحكام</a>
+                    </div> */}
+                    <div className="socialMedia">
+                    <a href="https://www.tiktok.com/@play_with5" target='blank'><i className="fa-brands fa-tiktok" ></i></a>
+                    <a href="https://www.instagram.com/play_with5/" target='blank'><i className="fa-brands fa-square-instagram "></i></a>
+                    </div>
+                </div>
+                <div className="down">
+                    <p>جميع حقوق النشر والطبع محفوظة  لـ تخيّر 2024©</p>
+                </div>
+            </div>
+        </div>
+    
         
     </div>
   )
