@@ -23,8 +23,9 @@ const SingleGame =  (props) => {
                   </div>
           </div>
           <div className="video">
-              {/* <iframe  src="https://www.youtube.com/embed/smK9TAEWhRg?si=ZSuq5J7RTUKO0QCQ&amp;controls=0" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe> */}
-              <iframe  src={GameList[gameNumber-1].videoUrl} title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+          {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/smK9TAEWhRg?si=jxGpuCDbat0ogpJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+          {/* <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/smK9TAEWhRg?si=jxGpuCDbat0ogpJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+              <iframe  src={GameList[gameNumber-1].videoUrl}  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div> 
       </div>
 

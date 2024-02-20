@@ -10,7 +10,7 @@ const Body = ( props) => {
   let classSelected=props.playerClassSelected;
 
 useEffect(()=>{
-   axios.get(`https://game-api-hex6.onrender.com/api/v1/games/filtering/?name="${classSelected}"`).then((response)=>{
+   axios.get(`https://www.playwith5.com/el3b-server/api/v1/games/filtering/?name="${classSelected}"`).then((response)=>{
   // console.log(response.data.deletegame);
   setGamesList(response.data.deletegame)  
   return response;
@@ -42,9 +42,12 @@ useEffect(()=>{
         <>
       {GamesList && <SingleGame GamesList={GamesList}  stateNumber={stateNumber}  />}
         <div className="Previous_and_next" dir="rtl">
-        
-        <div className="Previous" onClick={OnClickPrevise}> <span>{`<`}</span> اللعبة السابقة  </div>
-          <div className="btns">
+        {
+          stateNumber != 1 &&
+          <div className="Previous" onClick={OnClickPrevise}> <span>{`<`}</span> اللعبة السابقة  </div>
+        }
+       
+          {/* <div className="btns">
             {
               GamesList && GamesList.map((ele,index)=>{
                 if(index ==0){
@@ -58,14 +61,13 @@ useEffect(()=>{
                 }
               })
             }
-            {/* <button className="active" id="1" onClick={OnClickBtn}>1</button>
-            <button id="2" onClick={OnClickBtn}>2</button>
-            <button id="3" onClick={OnClickBtn}>3</button>
-            <button id="4" onClick={OnClickBtn}>4</button>
-            <button id="5" onClick={OnClickBtn}>5</button>
-            <button id="6" onClick={OnClickBtn}>6</button> */}
-          </div>
+         
+          </div> */}
+          {
+          stateNumber !=  6 &&
           <div className="next" onClick={OnClickNext}>اللعبة التالية <span>{`>`}</span></div>
+        }
+          
           
         </div>
         </>}
@@ -85,9 +87,9 @@ useEffect(()=>{
           </div>
         }
         
-        <div className="allGamesbtn">
+        {/* <div className="allGamesbtn">
           <button onClick={()=>setshowALLgames('on')}><img src={cardImg} alt="cardImg" />  جميع الألعاب</button>
-        </div>
+        </div> */}
     </div>
   )
 }

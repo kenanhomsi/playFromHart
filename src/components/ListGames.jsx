@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const ListGames = (props) => {
     const [PlayerClasslist,setPlayerClasslist]=useState();
     useEffect(()=>{
-      axios.get("https://game-api-hex6.onrender.com/api/v1/playerclass/").then((response)=>{
+      axios.get("https://www.playwith5.com/el3b-server/api/v1/playerclass/").then((response)=>{
         setPlayerClasslist(response.data);
       return response;
     }).catch((err)=>console.log(err));

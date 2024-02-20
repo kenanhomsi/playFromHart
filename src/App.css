@@ -613,10 +613,10 @@ color: var(--mainColor);
   .body .text .brifeExpline{
     text-align: center;
   }
-  .SingleGame_container .body .video iframe {
+  /* .SingleGame_container .body .video iframe {
     width: 330px;
     height: 170px;
-  }
+  } */
   .SingleGame_container .body .video::after {
     width: 100px;
     height: 40px;

@@ -14,7 +14,7 @@ const App=()=> {
   const [OrderBtnState,setOrderBtnState]=useState('on');
   useEffect(()=>{
     console.log('yess');  
-    axios.get("https://game-api-hex6.onrender.com/api/v1/playerclass/")
+    axios.get("https://www.playwith5.com/el3b-server/api/v1/playerclass/")
     .then((response)=>{
       console.log(response.data);
       let x=response.data;
@@ -28,7 +28,7 @@ const App=()=> {
 
   console.log(Classlist)
   console.log(playerClassSelected);
-  axios.get('https://game-api-hex6.onrender.com/api/v1/MainPage/?banner="main"')
+  axios.get('https://www.playwith5.com/el3b-server/api/v1/MainPage/?banner="main"')
   .then((res)=>{
     setOrderBtnState(res.data[0].BayBtn)})
   .catch((err)=>console.log(err));
@@ -41,7 +41,7 @@ const App=()=> {
     <Body  playerClassSelected={playerClassSelected}/>
     </>
     }
-    <WhoAreWe />
+    {/* <WhoAreWe /> */}
     </div>
     {
       OrderBtnState && <Footer OrderBtnState={OrderBtnState} />

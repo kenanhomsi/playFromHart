@@ -28,7 +28,7 @@ const Footer = (props) => {
         
         try {
         
-        const response = await axios.post('https://game-api-hex6.onrender.com/api/v1/Customer/',formData).then((res)=>{
+        const response = await axios.post('https://www.playwith5.com/el3b-server/api/v1/Customer/',formData).then((res)=>{
         })
         
         console.log('Form data submitted successfully:', response.data);
