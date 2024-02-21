@@ -415,7 +415,7 @@ padding: 0px 60px;
 }
 .Footer .info .text .down{
   text-align: center;
-  padding-left: 38px;
+  /* padding-left: 18px; */
 }
 
 .Footer .info .text .up::after{
@@ -576,6 +576,7 @@ color: var(--mainColor);
   }
   .Navbar_container .logo img {
     width: 83px;
+    margin-right: -85px;
   }
   .Navbar_container .order_btn span{
     display: none;
@@ -716,6 +717,13 @@ color: var(--mainColor);
   .Footer .info .text {
     width: 100%;
   }
+  .Footer .info .text2{
+    text-align: center;
+  }
+  .Footer .info .text2 img{
+    width: 110px;
+  }
+  
   .Footer .info .text .up {
     flex-direction: column;
     align-items: center;
@@ -788,4 +796,13 @@ color: var(--mainColor);
 }
 .playerClassMobile option{
   font-size: 13px;
+}
+.Footer .info .text2{
+  text-align: center;
+    display: flex;
+    gap: 27px;
+    margin-right: 25px;
+}
+.Footer .info .text2 img{
+  width: 110px;
 }

@@ -1,4 +1,5 @@
 import logo from '../assets/logo.png'
+import sublogo from '../assets/logo2.png'
 import { useState } from 'react';
 import axios from 'axios'
 const Footer = (props) => {
@@ -86,6 +87,10 @@ const Footer = (props) => {
                     <a href="https://www.tiktok.com/@play_with5" target='blank'><i className="fa-brands fa-tiktok" ></i></a>
                     <a href="https://www.instagram.com/play_with5/" target='blank'><i className="fa-brands fa-square-instagram "></i></a>
                     </div>
+                    <div className="text2">
+                <p>أحد منتجات</p>
+                <img src={sublogo} alt="sublogo"/>
+            </div>
                 </div>
                 <div className="down">
                     <p>جميع حقوق النشر والطبع محفوظة  لـ تخيّر 2024©</p>

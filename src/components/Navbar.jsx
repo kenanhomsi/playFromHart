@@ -7,10 +7,7 @@ const Navbar = (props) => {
     return (
     <div className="Navbar_container">
         <div className="socialmedia">
-            <div className="text">
-                <p>أحد منتجات</p>
-                <img src={sublogo} alt="sublogo"/>
-            </div>
+            
             <div className="icons">
                 <a href="https://www.tiktok.com/@play_with5" target='blank'><i className="fa-brands fa-tiktok" ></i></a>
                 <a href="https://www.instagram.com/play_with5/" target='blank'><i className="fa-brands fa-square-instagram "></i></a>
