@@ -38,11 +38,14 @@ useEffect(()=>{
     activebtn.className="";
  
   }
+  console.log(GamesList);
   return (
     <div >        
         {showALLgames=='off' &&
         <>
-      {GamesList && <SingleGame GamesList={GamesList}  stateNumber={stateNumber}  />}
+      {GamesList &&
+      GamesList.length != 0 
+      && <SingleGame GamesList={GamesList}  stateNumber={stateNumber}  />}
         <div className="Previous_and_next" dir="rtl">
         {
           stateNumber != 1 &&
