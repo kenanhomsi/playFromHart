@@ -18,9 +18,9 @@ const SingleGame =  (props) => {
                   <div className="brifeExpline" dir="rtl">
                   {GameList[gameNumber-1].briefExplian}
                   </div>
-                  <div className="note" dir='rtl'>
+                  {/* <div className="note" dir='rtl'>
                   ملاحظة : سامحين لك تسأل سؤال كان ودك تسأله بس منحرج ، حتى لو ماكان مكتوب بالأوراق ، أهم شيء لا يصيدك المنافس
-                  </div>
+                  </div> */}
           </div>
           <div className="video">
           {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/smK9TAEWhRg?si=jxGpuCDbat0ogpJ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
