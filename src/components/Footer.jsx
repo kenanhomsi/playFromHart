@@ -70,7 +70,7 @@ const Footer = (props) => {
             <p>قم بملء البيانات التالية</p>
             <input type="text" className='FullName' placeholder='الإسم بالكامل' onChange={handleChange}/>
           
-            <input type='number' className='phoneNumebr' placeholder='رقم الجوال' onChange={handleChange} />
+            <input type='text' className='phoneNumebr' placeholder='  رقم الجوال  05xxxxxxx'   onChange={handleChange} />
             <button className='order_click_btn' onClick={handleClick} type='submit'  >طلب اللعبه</button>
         </form>
         </div>   

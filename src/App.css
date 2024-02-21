@@ -385,9 +385,9 @@ align-items: center;
 }
 .Footer .info{
   width: 100%;
-  
   display: flex;
 align-items: center;
+flex-direction: column;
 padding: 0px 60px;
 }
 .Footer .info .logo{
@@ -406,12 +406,15 @@ padding: 0px 60px;
 }
 .Footer .info .text .up{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
+  align-items: center;
   margin-bottom: 40px;
+  /* text-align: center; */
+  margin-top: 20px;
 }
 .Footer .info .text .down{
-  text-align: left;
+  text-align: center;
   padding-left: 38px;
 }
 
@@ -602,7 +605,7 @@ color: var(--mainColor);
     display: block;
   }
  .SingleGame_container .header h2 span {
-    width: 190px;
+    width: 235px;
     font-size: 30px;
   }
    .SingleGame_container .header div::before {
@@ -745,6 +748,9 @@ color: var(--mainColor);
   margin-bottom: 5px;
   font-size: 17px;
 }
+.Navbar_container,.ListGames_container{
+  margin: -10px 0;
+}
 }
 /*final*/
 .allGamesdiv{
@@ -776,6 +782,9 @@ color: var(--mainColor);
 }
 .Cplayer i{
   margin: 0px 20px;
+}
+.playerClassMobile{
+  text-align: center;
 }
 .playerClassMobile option{
   font-size: 13px;
